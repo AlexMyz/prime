@@ -1407,6 +1407,8 @@ body {
   font-weight: 500;
   line-height: normal;
   padding: 30px 0 30px 0;
+  cursor: pointer;
+  border-radius: 30px 30px 0 0;
 }
 
 .content-lines__tab._active {
@@ -2418,27 +2420,6 @@ body {
   }
 }
 
-@media (max-width: 768px) {
-  .content-lines__tabs {
-    display: none;
-  }
-
-  .cases__slider {
-    /* height: 728px; */
-  }
-
-  .slider-cases__item._active {
-    /* min-width: 420px; */
-    -webkit-box-flex: 100%;
-        -ms-flex: 100%;
-            flex: 100%;
-  }
-
-  .info-case {
-    height: 420px;
-  }
-}
-
 @media screen and (max-width: 767.98px) {
   #btn-mobile {
     display: block;
@@ -2666,83 +2647,12 @@ body {
 }
 
 @media (max-width: 767px) {
-  #cases {
-    margin: 80px 0 80px 0;
-  }
-
-  .header-cases {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    gap: 40px;
-  }
-
-  .header-cases__title {
-    -ms-flex-item-align: start;
-        align-self: flex-start;
-  }
-
-  .header-cases__arrows {
-    display: none;
-  }
-
-  .header-cases__dots {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    gap: 8px;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-
-  .header-cases__dots span {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: #EBEDF7;
-  }
-
-  .header-cases__dots span._active {
-    background: #5A6CC0;
-  }
-
-  .slider-cases__item._active {
-    /* min-width: 0px; */
-  }
-
-  .slider-cases__button {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 479.98px) {
-  .header__logo {
-    width: 117px;
-    height: 39px;
-  }
-
-  .hero {
-    font-size: calc(32px + 4.2666666667vw);
-  }
-
-  .main__content {
-    font-size: 18px;
-    /* padding-top: 80px; */
-  }
-
-  .footer__container {
-    padding: 20px;
-  }
-}
-
-@media (max-width: 376px) {
   body {
     background: var(--accent-light-2, #EBEDF7);
+  }
+
+  .content-lines__tabs {
+    display: none;
   }
 
   .content-lines__block {
@@ -2764,7 +2674,6 @@ body {
         -ms-flex-pack: justify;
             justify-content: space-between;
     gap: 35px;
-    margin: 0 0 30px 0;
   }
 
   .content-lines__accordion._active img {
@@ -2950,12 +2859,76 @@ body {
     gap: 16px;
   }
 
+  #cases {
+    margin: 80px 0 80px 0;
+  }
+
   .cases__header {
     margin: 0 0 40px 0;
   }
 
+  .cases__slider {
+    /* height: 728px; */
+  }
+
+  .header-cases {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 40px;
+  }
+
+  .header-cases__title {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+
   .header-cases__title {
     font-size: 36px;
+  }
+
+  .header-cases__arrows {
+    display: none;
+  }
+
+  .header-cases__dots {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 8px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .header-cases__dots span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #EBEDF7;
+  }
+
+  .header-cases__dots span._active {
+    background: #5A6CC0;
+  }
+
+  .slider-cases__item._active {
+    /* min-width: 420px; */
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
+  }
+
+  .slider-cases__item._active {
+    /* min-width: 0px; */
+  }
+
+  .slider-cases__button {
+    display: none;
   }
 
   .content-case__title h3 {
@@ -2966,6 +2939,30 @@ body {
   .content-case__count {
     font-weight: 400;
     letter-spacing: 0.4px;
+  }
+
+  .info-case {
+    height: 420px;
+  }
+}
+
+@media screen and (max-width: 479.98px) {
+  .header__logo {
+    width: 117px;
+    height: 39px;
+  }
+
+  .hero {
+    font-size: calc(32px + 4.2666666667vw);
+  }
+
+  .main__content {
+    font-size: 18px;
+    /* padding-top: 80px; */
+  }
+
+  .footer__container {
+    padding: 20px;
   }
 }
 
