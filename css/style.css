@@ -1638,6 +1638,11 @@ body {
   background: var(--accent-light, #BCC2DC);
 }
 
+.item-transformation img {
+  width: 48px;
+  height: 48px;
+}
+
 .block-2-transformation__row {
   padding: 24px 30px 30px 30px;
   display: -webkit-box;
@@ -1700,6 +1705,13 @@ body {
   -webkit-transform: translateX(-15%);
       -ms-transform: translateX(-15%);
           transform: translateX(-15%);
+  color: var(--Black, #2A2A2A);
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
 }
 
 .item-transformation-stage:after,
@@ -1749,16 +1761,41 @@ body {
 }
 
 .item-transformation-arrow div {
+  color: var(--accent-1, #5A6CC0);
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
   position: absolute;
-  display: none;
+  bottom: 20px;
+  right: 20px;
 }
 
 .item-transformation-stage-up {
   top: 0;
 }
 
+.item-transformation-stage-up::after {
+  content: "";
+  border-right: 2px dashed #5A6CC0;
+  position: absolute;
+  height: 100%;
+  right: 50%;
+}
+
 .item-transformation-stage-down {
   bottom: 0;
+}
+
+.item-transformation-stage-down::before {
+  content: "";
+  border-right: 2px dashed #5A6CC0;
+  position: absolute;
+  height: 100%;
+  right: 50%;
+  top: -100%;
 }
 
 .body-development {
@@ -2664,6 +2701,10 @@ body {
 }
 
 @media (max-width: 767px) {
+  .lines__container {
+    background: #e8ecf9;
+  }
+
   .content-lines__tabs {
     display: none;
   }
@@ -2716,6 +2757,7 @@ body {
         -ms-flex-direction: column;
             flex-direction: column;
     gap: 40px;
+    margin: 0 0 20px 0;
   }
 
   .body-managment__column {
@@ -2822,6 +2864,20 @@ body {
   .item-transformation-arrow::after {
     top: 40px;
     left: -2px;
+  }
+
+  .item-transformation-arrow div {
+    bottom: 0;
+    right: 0;
+    left: 20px;
+  }
+
+  .item-transformation-stage-up::after {
+    display: none;
+  }
+
+  .item-transformation-stage-down::before {
+    display: none;
   }
 
   .body-development {
