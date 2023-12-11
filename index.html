@@ -4,67 +4,80 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.min.css?_v=20231210122656">
+    <link rel="stylesheet" href="css/style.min.css?_v=20231211080634">
     <title>PRIME</title>
 </head>
 <body>
+  <div class="wrapper">
     <header class="header">
-  <div class="container">
+  <div class="_container">
     <div class="header__top">
-      <a href="#">
-        <img class="header__logo" src="img/logo.svg" alt="logo" />
+      <a href="/" class="header__logo">
+        <img src="img/logo.svg" alt="logo" />
       </a>
-      <nav class="menu">
-        <ul class="menu__list">
-          <li class="menu__list-item">
-            <a
-              class="menu__link _active"
-              href="https://maxnightik.github.io/prime/"
-              >Home</a
-            >
-          </li>
-          <li class="menu__list-item">
-            <a class="menu__link" href="#values">Our values</a>
-          </li>
-          <li class="menu__list-item">
-            <a class="menu__link" href="#lines">Business lines</a>
-          </li>
-          <li class="menu__list-item">
-            <a class="menu__link" href="#cases">Our cases</a>
-          </li>
-          <li class="menu__list-item">
-            <a class="menu__link" href="#footer">Contacts</a>
-          </li>
+      <div class="header__center-block">
+        <nav class="header__menu menu-header">
+          <ul class="menu-header__list">
+            <li class="menu-header__item _active">
+              <a href="/" class="menu-header__link">Home</a>
+            </li>
+            <li class="menu-header__item">
+              <a href="#values" class="menu-header__link">Our values</a>
+            </li>
+            <li class="menu-header__item">
+              <a href="#lines" class="menu-header__link">Business lines</a>
+            </li>
+            <li class="menu-header__item">
+              <a href="#cases" class="menu-header__link">Cases</a>
+            </li>
+            <li class="menu-header__item">
+              <a href="#footer" class="menu-header__link">Contacts</a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="menu-header__lng">
+          <li class="_active">en</li>
+          <li>ro</li>
+          <li>ru</li>
         </ul>
-      </nav>
-      <button class="contact__btn">Contact us</button>
-      <!-- burger -->
+      </div>
+      <button class="header__btn-contacts">Contact us</button>
+      <!-- <div class="menu-header__burger"> -->
       <div class="menu__icon">
         <span></span>
       </div>
-      <!-- burger -->
     </div>
-    <h1 class="hero">
-      <div class="intelligent">Intelligent</div>
-      <div class="business">Business</div>
-      <div class="growth">Growth</div>
-    </h1>
   </div>
 </header>
-
-    <main>
-        <div class="main__content">
-  <div class="container">
-    The<span class="text-blue">Prime Goal</span> of our professional team is to
-    increase the degree of digitalization of our clients` business, who are also
-    our loyal partners.<br />
-    By developing and integrating enterprise class software solutions in
-    conjunction with our approach, you can easily implement business process
-    management and increase the maturity level of your business
+    <main class="page">
+      <section class="banner">
+  <div class="banner__container _container">
+    <div class="banner__column">
+      <div class="banner__item">Intelligent</div>
+      <div class="banner__item">Business</div>
+      <div class="banner__item">Growth</div>
+    </div>
+  </div>
+  <div class="banner__image">
+    <picture><source srcset="img/header.webp" type="image/webp"><img src="img/header.webp" alt="banner"></picture>
+  </div>  
+</section>
+      <div class="main-block">
+  <div class="main-block__container _container">
+    <div class="main-block__body">
+      <p>
+        The<span class="text-blue">Prime Goal</span> of our professional team is tovincrease the degree of digitalization of our clients` business, who are alsovour loyal partners
+      </p>
+      <p>
+        By developing and integrating enterprise class software solutions in
+        conjunction with our approach, you can easily implement business process
+        management and increase the maturity level of your business
+      </p>
+    </div>
   </div>
 </div>
 
-        <section id="values">
+      <section id="values">
   <div class="values__container">
     <h2 class="values__title title">Our values</h2>
     <div class="values__block">
@@ -125,7 +138,7 @@
   </div>
 </section>
 
-        <section id="lines">
+      <section id="lines" class="lines">
   <div class="_container">
     <h2 class="lines__title title">Our business lines</h2>
   </div>
@@ -671,7 +684,7 @@
   </div>
 </section>
 
-        <section id="cases" class="cases">
+      <section id="cases" class="cases">
   <div class="_container">
     <div class="cases__header header-cases">
       <h2 class="header-cases__title">Our cases</h2>
@@ -1452,6 +1465,24 @@
 </section>
 
     </main>
+    <div class="pop-up">
+  <form action="#" method="post">
+    <input type="text" id="name" name="name" placeholder="Name" required />
+
+    <input type="email" id="email" name="email" placeholder="E-mail" required />
+
+    <textarea
+      id="message"
+      name="message"
+      rows="3"
+      placeholder="If you have any questions or need any assistance"
+      required
+    ></textarea>
+
+    <button class="btn__message" type="submit">Send Message</button>
+  </form>
+</div>
+
     <footer id="footer">
   <div class="footer__container container">
     <div class="footer__inner">
@@ -1551,24 +1582,7 @@ If you have any questions or need any assistance"
   </div>
 </footer>
 
-    <div class="pop-up">
-  <form action="#" method="post">
-    <input type="text" id="name" name="name" placeholder="Name" required />
-
-    <input type="email" id="email" name="email" placeholder="E-mail" required />
-
-    <textarea
-      id="message"
-      name="message"
-      rows="3"
-      placeholder="If you have any questions or need any assistance"
-      required
-    ></textarea>
-
-    <button class="btn__message" type="submit">Send Message</button>
-  </form>
-</div>
-
-    <script src="js/app.min.js?_v=20231210122656"></script>
+  </div>
+  <script src="js/app.min.js?_v=20231211080634"></script>
 </body>
 </html>
