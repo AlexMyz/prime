@@ -3122,6 +3122,10 @@ svg {
     background: #5A6CC0;
   }
 
+  .slider-cases__line {
+    min-height: 728px;
+  }
+
   .slider-cases__item._active {
     -webkit-box-flex: 1;
         -ms-flex: 1;
