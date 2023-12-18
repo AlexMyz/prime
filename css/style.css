@@ -758,6 +758,11 @@ h6 {
   top: 0px;
   left: 0px;
   z-index: 50;
+  padding: 0 0 10px 0;
+}
+
+.header._not-top {
+  background: #FFF;
 }
 
 .header__top {
@@ -851,14 +856,6 @@ h6 {
   border: 1px solid #FFF;
 }
 
-.header._not-top .menu-header__list {
-  color: #2A2A2A;
-  background: rgba(196, 216, 255, 0.7);
-  background-blend-mode: soft-light;
-  -webkit-backdrop-filter: blur(35px);
-          backdrop-filter: blur(35px);
-}
-
 .menu-header__item {
   padding: 13px 8px;
   border-radius: 30px;
@@ -878,6 +875,7 @@ h6 {
 }
 
 .menu-header__link {
+  padding: 13px 8px;
   color: inherit;
   word-wrap: normal;
 }
@@ -1835,6 +1833,18 @@ svg {
   background: var(--accent-1, #5A6CC0);
 }
 
+.table-development__menu ul._open li._active::before {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.table-development__menu ul._open li._active::after {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
 .table-development__body {
   background: var(--white, #FFF);
   border-radius: 50px;
@@ -2193,6 +2203,16 @@ svg {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+
+@media (min-width: 767px) {
+  .header._not-top .menu-header__list {
+    color: #2A2A2A;
+    background: rgba(196, 216, 255, 0.7);
+    background-blend-mode: soft-light;
+    -webkit-backdrop-filter: blur(35px);
+            backdrop-filter: blur(35px);
+  }
 }
 
 @media screen and (min-width: 1920px) {
@@ -2848,6 +2868,12 @@ svg {
     background-color: #fff;
   }
 
+  .header._not-top .menu-header__burger::before,
+  .header._not-top .menu-header__burger:after,
+  .header._not-top .menu-header__burger span {
+    background-color: #2A2A2A;
+  }
+
   .menu-header__burger::before,
   .menu-header__burger:after {
     content: "";
@@ -2875,6 +2901,7 @@ svg {
   }
 
   .menu-header__burger._active::before {
+    background-color: #fff !important;
     top: 50%;
     -webkit-transform: rotate(45deg) translate(0px, -50%);
         -ms-transform: rotate(45deg) translate(0px, -50%);
@@ -2882,6 +2909,7 @@ svg {
   }
 
   .menu-header__burger._active:after {
+    background-color: #fff !important;
     bottom: 50%;
     -webkit-transform: rotate(-45deg) translate(0px, 50%);
         -ms-transform: rotate(-45deg) translate(0px, 50%);
@@ -3165,6 +3193,8 @@ svg {
     background: #FFF;
     position: absolute;
     top: 20px;
+    -webkit-transition: all 0.2s ease 0s;
+    transition: all 0.2s ease 0s;
   }
 
   .table-development__menu ul li._active::before {
